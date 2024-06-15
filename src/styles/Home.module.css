@@ -1,0 +1,294 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ff4c00;
+}
+
+.aboutLink {
+  font-size: 15px;
+  color: blue;
+  text-decoration: none;
+  margin-top: 7px;
+}
+
+.aboutLink:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.authButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.loginButton:hover {
+  background-color: rgba(230, 219, 219, 0.551);
+  color: #959191;
+}
+
+.signupButton:hover {
+  background-color: rgba(227, 87, 23, 0.551);
+  color: #ff0000;
+}
+
+.loginButton, .signupButton {
+  background: none;
+  border: 1px solid #ff4c00;
+  color: #ff4c00;
+  padding: 5px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.signupButton {
+  background-color: #ff4c00;
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 25px 50px;
+}
+
+.title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.description {
+  margin: 17px 0;
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: #ff4c00;
+  color: #fff;
+  transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    padding: 20px 40px;
+  }
+
+  .navbar {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+  }
+
+  .aboutLink {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  .main {
+    margin: 50px 100px
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+  
+  .authButtons {
+    gap: 20px;
+  }
+  
+  .loginButton, .signupButton {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 10px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .aboutLink {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .authButtons {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .loginButton, .signupButton {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .main {
+    margin: 15px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  .primaryButton, .secondaryButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 7px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .aboutLink {
+    font-size: 9px;
+    margin-top: 5px;
+  }
+
+  .authButtons {
+    flex-direction: row;
+    gap: 7px;
+  }
+
+  .loginButton, .signupButton {
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+
+  .main {
+    margin: 15px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  .primaryButton, .secondaryButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
