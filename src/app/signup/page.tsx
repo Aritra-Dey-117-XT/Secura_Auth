@@ -71,10 +71,24 @@ export default function SignupPage() {
         })
     }
 
-    const handleConfirmPasswordChange = (event: any) => {
-        const {value} = event.target
-        setUser({...user, confirmPassword: value})
-        setConfirmPasswordValidation(document.getElementById("password")?.value === document.getElementById("confirmPassword")?.value)
+    // const handleConfirmPasswordChange = (event: any) => {
+    //     const {value} = event.target
+    //     setUser({...user, confirmPassword: value})
+    //     setConfirmPasswordValidation(document.getElementById("password")?.value === document.getElementById("confirmPassword")?.value)
+    // }
+
+    const handleConfirmPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setUser({ ...user, confirmPassword: value });
+    
+        const newPasswordElement = document.getElementById("newPassword") as HTMLInputElement;
+        const confirmPasswordElement = document.getElementById("confirmPassword") as HTMLInputElement;
+    
+        if (newPasswordElement && confirmPasswordElement) {
+            const newPasswordValue = newPasswordElement.value;
+            const confirmPasswordValue = confirmPasswordElement.value;
+            setConfirmPasswordValidation(newPasswordValue === confirmPasswordValue);
+        }
     }
 
     const handleFocus = (field: string) => {
