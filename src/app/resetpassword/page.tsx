@@ -163,7 +163,7 @@ export default function ResetPasswordPage() {
                                 {newPasswordValidation.number ? "✔️" : "❌"}Must Contain Atleast 1 DIGIT(0-9).
                             </p>
                             <p className={newPasswordValidation.special ? "valid" : "invalid"}>
-                                {newPasswordValidation.special ? "✔️" : "❌"}Must Contain Atleast 1 SPECIAL(!,",#,$,%,&,*,/,?,@ etc...) Character.
+                                {newPasswordValidation.special ? "✔️" : "❌"}Must Contain Atleast 1 SPECIAL(!,#,$,%,&,*,/,?,@ etc...) Character.
                             </p>
                         </div>
                     )}

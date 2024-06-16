@@ -249,7 +249,7 @@ export default function SignupPage() {
                                 {passwordValidation.number ? "✔️" : "❌"}Must Contain Atleast 1 DIGIT(0-9).
                             </p>
                             <p className={passwordValidation.special ? "valid" : "invalid"}>
-                                {passwordValidation.special ? "✔️" : "❌"}Must Contain Atleast 1 SPECIAL(!,",#,$,%,&,*,/,?,@ etc...) Character.
+                                {passwordValidation.special ? "✔️" : "❌"}Must Contain Atleast 1 SPECIAL(!,#,$,%,&,*,/,?,@ etc...) Character.
                             </p>
                         </div>
                     )}
