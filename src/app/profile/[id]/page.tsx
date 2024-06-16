@@ -1,5 +1,8 @@
-import User from "@/models/userModel"
 import Link from "next/link"
+import User from "@/models/userModel"
+import { connect } from "@/dbConfig/dbConfig"
+
+connect()
 
 export default async function UserProfile({params} : any) {
 
