@@ -81,7 +81,7 @@ export default function SignupPage() {
         const { value } = event.target;
         setUser({ ...user, confirmPassword: value });
     
-        const newPasswordElement = document.getElementById("newPassword") as HTMLInputElement;
+        const newPasswordElement = document.getElementById("password") as HTMLInputElement;
         const confirmPasswordElement = document.getElementById("confirmPassword") as HTMLInputElement;
     
         if (newPasswordElement && confirmPasswordElement) {
