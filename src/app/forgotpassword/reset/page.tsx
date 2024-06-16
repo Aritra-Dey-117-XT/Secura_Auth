@@ -7,12 +7,15 @@ import {toast} from "react-hot-toast"
 
 export default function UpdateForgotPasswordPage() {
 
+    let hashedUserID = undefined
     const [password, setPassword] = useState({
         newPassword: "",
         confirmPassword: ""
     })
 
-    const hashedUserID = window.location.search.split("=")[1]
+    if (typeof window !== 'undefined') {
+        hashedUserID = window.location.search.split("=")[1]
+    }
 
     const [newPasswordValidation, setNewPasswordValidation] = useState({
         length: false,

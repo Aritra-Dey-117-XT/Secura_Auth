@@ -8,7 +8,10 @@ import {toast} from "react-hot-toast"
 
 export default function ResetPasswordPage() {
 
-    const userID = window.location.search.split("=")[1]
+    let userID = ""
+    if (typeof window !== 'undefined') {
+        userID = window.location.search.split("=")[1]
+    }
 
     const [password, setPassword] = useState({
         currentPassword: "",

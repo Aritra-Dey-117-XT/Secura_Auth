@@ -32,7 +32,10 @@ export default function VerifyForgotPasswordTokenPage() {
     }
 
     useEffect(() => {
-        const token = window.location.search.split("=")[1]
+        let token = ""
+        if (typeof window !== 'undefined') {
+            token = window.location.search.split("=")[1]
+        }
         setToken(token || "")
     }, [])
 
