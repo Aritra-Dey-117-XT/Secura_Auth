@@ -47,10 +47,10 @@ export default function ProfilePage() {
         }
     }
 
-    const logout = async () => {
+    const onLogout = async () => {
         try {
             
-            await axios.get("/api/users/logout")
+            await axios.post("/api/users/logout")
             toast.success("User Logged Out Successfully!")
             router.push("/login")
 
@@ -104,7 +104,7 @@ export default function ProfilePage() {
             <button 
                 type="button"
                 className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
-                onClick={logout}
+                onClick={onLogout}
             >
                 Logout
             </button>
