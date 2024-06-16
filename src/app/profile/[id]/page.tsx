@@ -1,7 +1,7 @@
 import User from "@/models/userModel"
 import Link from "next/link"
 
-export default async function userProfile({params} : any) {
+export default async function UserProfile({params} : any) {
 
     const user = await User.findOne({ _id: params.id })
 

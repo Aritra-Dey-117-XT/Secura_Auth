@@ -6,7 +6,7 @@ import {useRouter} from "next/navigation"
 import Link from "next/link"
 import {toast} from "react-hot-toast"
 
-export default function resetPasswordPage() {
+export default function ResetPasswordPage() {
 
     const userID = window.location.search.split("=")[1]
 

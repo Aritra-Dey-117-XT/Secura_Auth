@@ -6,7 +6,7 @@ import {useRouter} from "next/navigation"
 import Link from "next/link"
 import {toast} from "react-hot-toast"
 
-export default function forgotPasswordEmailPage() {
+export default function ForgotPasswordEmailPage() {
 
     const [email, setEmail] = useState({
         email: "",

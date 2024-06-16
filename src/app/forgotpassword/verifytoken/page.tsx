@@ -5,7 +5,7 @@ import axios from "axios"
 import Link from "next/link"
 import {toast} from "react-hot-toast"
 
-export default function verifyForgotPasswordTokenPage() {
+export default function VerifyForgotPasswordTokenPage() {
 
     const [hashedUserID, setHashedUserID] = useState("")
     const [token, setToken] = useState("")

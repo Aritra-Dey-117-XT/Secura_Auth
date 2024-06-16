@@ -5,7 +5,7 @@ import {useRouter} from "next/navigation"
 import Link from "next/link"
 import {toast} from "react-hot-toast"
 
-export default function updateForgotPasswordPage() {
+export default function UpdateForgotPasswordPage() {
 
     const [password, setPassword] = useState({
         newPassword: "",

@@ -5,7 +5,7 @@ import {useEffect, useState} from "react"
 import Link from "next/link"
 import {toast} from "react-hot-toast"
 
-export default function verifyEmailPage() {
+export default function VerifyEmailPage() {
 
     const [token, setToken] = useState("")
     const [verified, setVerified] = useState(false)
