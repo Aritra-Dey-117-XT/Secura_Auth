@@ -18,20 +18,19 @@ export const sendEmail = async({email, emailType, userID}: any) => {
             })
         }
 
-        var transport = nodemailer.createTransport({
-            host: "sandbox.smtp.mailtrap.io",
-            port: 2525,
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
             auth: {
-              user: process.env.MAILTRAP_USER,
-              pass: process.env.MAILTRAP_PASSWORD
+                user: process.env.SECURA_AUTH_EMAIL,
+                pass: process.env.SECURA_AUTH_APP_PASSWORD
             }
         });
 
         const verificationLink = emailType === "VERIFY" ? `${process.env.DOMAIN}/verifyemail?token=${hashedToken}` 
         : `${process.env.DOMAIN}/forgotpassword/verifytoken?token=${hashedToken}`
-
-        const mailOptions = {
-            from: "aritra@gmail.com",
+        
+        let mailOptions = {
+            from: process.env.SECURA_AUTH_EMAIL,
             to: email,
             subject: emailType === "VERIFY" ? "Verify Your Email" : "Reset Your Password",
             html: `
@@ -57,11 +56,12 @@ export const sendEmail = async({email, emailType, userID}: any) => {
                      <span style="
                         font-size: 1em; 
                         font-weight: bold; 
-                        display: inline-block; 
+                        display: inline-block;
+                        color: red;
                         animation: colorChange 3s infinite;
                         -webkit-animation: colorChange 3s infinite;
                     ">
-                        ARIVENGER
+                        Secura_Auth
                     </span>
                 </p>
                 <style>
@@ -96,12 +96,13 @@ export const sendEmail = async({email, emailType, userID}: any) => {
                 </style>
                 </p>
             </div>`
-        }
-        
-        const mailResponse = await transport.sendMail(mailOptions)
+        };
+
+        const mailResponse = await transporter.sendMail(mailOptions)
         return mailResponse
 
-    } catch (error: any) {
+    } catch(error: any) {
         throw new Error(error.message)
     }
+
 }
