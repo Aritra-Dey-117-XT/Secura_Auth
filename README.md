@@ -45,10 +45,17 @@ Create a .env file in the root directory and add the following variables:
 
 MONGODB_URI=<your_mongodb_uri>
 TOKEN_SECRET=<token_secret>
-DOMAIN=<your_domain> # like for port 3000 in local server: "http://localhost:3000"
-# MAILTRAP #
-MAILTRAP_USER=<your_mailtrap_userid>
-MAILTRAP_PASSWORD=<your_mailtrap_password>
+DOMAIN=<your_domain> # like for port 3000 in local server: "https://localhost:3000"
+
+# email sending -- steps to follow (A Google Mail Account is preferred.)
+
+# 1. select or create a new email id for this purpose. 
+# 2. Activate 2-Factor-Authentication in your gmail.
+# 3. Now go to App Password (search if you unable to find) and create a new App.
+# 4. A App password will be generated. You need to use it as <your_email_app_password>, not your account password.
+
+SECURA_AUTH_EMAIL=<your_email_id>
+SECURA_AUTH_APP_PASSWORD=<your_email_app_password>
 ```
 
 4. **Run the application:**
