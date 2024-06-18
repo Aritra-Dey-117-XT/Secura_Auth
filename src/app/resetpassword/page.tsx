@@ -107,14 +107,12 @@ export default function ResetPasswordPage() {
             toast.dismiss()
             toast.loading("Loading...")
             const response = await axios.post("/api/users/resetPassword", {userID, ...password})
-            console.log("Password Update Successful : ", response.data)
             toast.dismiss()
             toast.success("Password Updated Successfully!")
             router.push("/profile")
 
         } catch (error: any) {
 
-            console.log("Reset Problem : ", error)
             toast.dismiss()
             toast.error(error.response.data.message)
 

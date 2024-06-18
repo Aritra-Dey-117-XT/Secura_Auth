@@ -24,7 +24,6 @@ export async function POST(request: NextRequest) {
         for (let user of users) {
             const isMatch = await bcryptjs.compare(user._id.toString(), hashedUserID);
             if (isMatch) {
-                console.log('ID matches for user:', user);
                 matchedUser = user
             }
         }

@@ -28,7 +28,7 @@ Visit at: https://secura-auth.vercel.app.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/Secura_Auth.git
+   git clone https://github.com/Aritra-Dey-117-XT/Secura_Auth
    cd Secura_Auth
 
 2. **Install dependencies:**

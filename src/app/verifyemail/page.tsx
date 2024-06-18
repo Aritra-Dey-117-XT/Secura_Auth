@@ -21,7 +21,6 @@ export default function VerifyEmailPage() {
             toast.success("User Verification Successful! Please Head to Login Now!")
         } catch (error: any) {
             setError(true)
-            console.log(error.response.data)
             toast.dismiss()
             toast.error(error.response.data.error || "User Already Verified!")
         }

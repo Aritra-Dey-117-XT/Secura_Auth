@@ -31,13 +31,11 @@ export default function ForgotPasswordEmailPage() {
             toast.dismiss()
             const loadingToast = toast.loading("Loading...")
             const response = await axios.post("/api/users/forgotPasswordToken", email)
-            console.log("Token Successfully Sent! : ", response.data)
             toast.dismiss()
             toast.success("A Reset link(Valid for 5 minutes) was sent to your Email. Check Your Email and Reset Your Password.", {duration: 6000})
             
         } catch (error: any) {
 
-            console.log("Unable to send Token: ", error)
             toast.dismiss()
             toast.error(error.response.data.message)
 

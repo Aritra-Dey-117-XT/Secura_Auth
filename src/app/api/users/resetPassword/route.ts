@@ -9,12 +9,9 @@ export async function POST(request: NextRequest) {
     try {
         
         const reqBody = await request.json()
-        console.log("reqBody:", reqBody)
         const {userID, currentPassword, newPassword, confirmPassword} = reqBody
-        console.log(userID, currentPassword, newPassword, confirmPassword)
 
         const user = await User.findOne({_id: userID})
-        console.log("user:", user)
 
         if(!user) {
             return NextResponse.json({message: "Error! Invalid User."}, {status: 401})

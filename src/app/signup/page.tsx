@@ -137,14 +137,12 @@ export default function SignupPage() {
             toast.dismiss()
             toast.loading("Loading...")
             const response = await axios.post("/api/users/signup", user)
-            console.log("User Successfully Registered : ", response.data)
             toast.dismiss()
             toast.success("User Successfully Registered! A verification link(Valid for 5 minutes) was sent to your Email. Check Your Email and Verify before Logging In.", {duration: 6000})
             router.push("/login")
 
         } catch (error: any) {
 
-            console.log("Signup Problem : ", error)
             toast.dismiss()
             toast.error(error.response.data.error)
 

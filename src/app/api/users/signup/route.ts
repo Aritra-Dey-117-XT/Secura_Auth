@@ -9,7 +9,6 @@ connect()
 export async function POST(request: NextRequest) {
     try {
         const reqBody = await request.json()
-        console.log(reqBody)
         const {username, email, password, confirmPassword} = reqBody
         const user = await User.findOne({email})
 
@@ -36,7 +35,6 @@ export async function POST(request: NextRequest) {
         })
 
         const savedUser = await newUser.save()
-        console.log(savedUser._id)
 
         try {
             await sendEmail({email, emailType: "VERIFY", userID: savedUser._id})

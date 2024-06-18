@@ -23,10 +23,6 @@ export default function ProfilePage() {
         if (userData) {
             router.push(`profile/${userData._id}`)
         }
-        // } else {
-        //     console.log("User data is missing")
-        //     toast.error("User data is missing")
-        // }
     }, [userData])
 
     const getUserInfo = async () => {
@@ -41,7 +37,6 @@ export default function ProfilePage() {
             setUserData(data)
 
         } catch (error: any) {
-            console.log("Error fetching user info: ", error)
             toast.dismiss()
             toast.error("Error Fetching User Info")
         }
@@ -55,7 +50,6 @@ export default function ProfilePage() {
             router.push("/login")
 
         } catch (error: any) {
-            console.log("Error Logging Out : ", error)
             toast.error(error.response.data.error)
         }
     }
@@ -67,7 +61,6 @@ export default function ProfilePage() {
             router.push(`/resetpassword?id=${data._id}`)
 
         } catch (error) {
-            console.log("Error fetching user info: ", error)
             toast.error("Error fetching user info")
         }
     }

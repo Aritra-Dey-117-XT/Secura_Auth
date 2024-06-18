@@ -25,7 +25,6 @@ export default function VerifyForgotPasswordTokenPage() {
             toast.success("You are Verified! Now Reset Your Password.")
         } catch (error: any) {
             setError(true)
-            console.log("Error During Verifying ", error)
             toast.dismiss()
             toast.error(error.response.data.error || "Link Expired!")
         }

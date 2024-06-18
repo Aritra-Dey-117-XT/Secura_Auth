@@ -31,7 +31,6 @@ export default function LoginPage() {
             toast.dismiss()
             toast.loading("Loading...")
             const response = await axios.post("/api/users/login", user)
-            console.log("User Successfully Logged In : ", response.data)
             toast.dismiss()
             toast.success("Login Successful!")
             router.push("/profile")
@@ -42,7 +41,6 @@ export default function LoginPage() {
                 toast.dismiss()
             toast.error(error.response.data.error, {duration: 6000, style: {background: "yellow", color: "red"}})
             } else {
-                console.log("Unable to Log In : ", error)
                 toast.dismiss()
                 toast.error(error.response.data.error)
             } 
